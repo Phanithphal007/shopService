@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+.option {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.option li {
+  position: relative;
+  list-style: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* underline pseudo-element */
+.option li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;       /* position at bottom of li */
+  left: 0;         /* start from left edge */
+  height: 2px;     /* underline thickness */
+  width: 0%;       /* start hidden */
+  background: black;
+}
+
+/* hover animation */
+.option li:hover::after {
+  animation: underlineGrow 0.4s forwards;
+}
+
+/* keyframe animation */
+@keyframes underlineGrow {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.petro{
+  animation: jumdown 0.5s ease-in-out infinite;
+}
+@keyframes jumdown{
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(-10px);
+  }
+}
+.petro:hover{
+  transform: scale(0.8);
+  animation-play-state: paused;
+}
+.buyicon {
+  animation: zomein 0.5s infinite ease-in-out;
+}
+@keyframes zomein {
+      0%, 100% {
+        transform: scale(1);
+        color:green;
+      }
+      50% {
+        transform: scale(1.2);
+        color: red;
+      }
+    }
+.sell{
+   font-family: "DM Sans", sans-serif;
+}
+.Prname{
+   font-family: "Raleway", sans-serif;
+}
+.sky{
+  animation: sky 0.5s ease-in-out infinite;
+}
+@keyframes sky{
+  0% ,100%{
+    color: yellow;
+    transform:skew(1);
+  }
+  50%{
+    color: red;
+    transform: scale(1.5);
+  }
+}
+.detail{
+  background-color: blue; 
+  animation: blur 0.4s forwards;
+}
