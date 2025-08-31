@@ -84,7 +84,4 @@
     transform: scale(1.5);
   }
 }
-.detail{
-  background-color: blue; 
-  animation: blur 0.4s forwards;
-}
+

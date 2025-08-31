@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const Container = () => {
+  
+  
   const container =document.querySelector('.container');
   let Product =[
     {
@@ -81,13 +83,16 @@ const Container = () => {
 
   ];
 
+
   return (
     <div >
-      <div className='w-full flex justify-center font-bold text-4xl mt-[30px] '>
+       <button className='' >Show</button>
+
+      <div className='w-full flex    justify-center  font-bold text-4xl mt-[30px] relative '>
         <h2 className=' text-shadow-cyan-950' > Man Style</h2>
-      </div>
-        <div className=' w-full h-auto flex justify-center'>
-           <div className="container grid   md:grid-cols-4 gap-6 p-[20px] ">{Product.map((url,index)=>(
+       </div>
+      <div className=' w-full ml-[30px] h-auto flex justify-center'>
+           <div className="container grid   md:grid-cols-4 gap-6  ">{Product.map((url,index)=>(
 
                  <div key={index} className='w-[300px] h-auto   relative shadow-2xl  bg-cover object-cover p-[15px] rounded-[10px]'>
                  <i class=" buyicon flex justify-center items-center rounded-[50%] fa-solid fa-face-grin-hearts  absolute top-[20px] right-[30px] p-[10px]  text-[25px]"></i>
@@ -117,8 +122,12 @@ const Container = () => {
                
            </div>
         </div>
-        <div className="container-grile">
-           <div className='w-full flex justify-center text-shadow-blue-800'><h2 className=' font-bold text-3xl mt-[20px] mb-[20px]'>Women Style </h2></div>
+
+
+
+        <div className="container-grile ml-[30px]  z-10">
+           <div className='w-full  flex justify-center text-shadow-blue-800'>
+            <h2 className=' font-bold text-3xl mt-[20px] mb-[20px]'>Women Style </h2></div>
            <div className=' grid  md:grid-cols-4 gap-6' > {productWomen.map((url,index)=>(
                  
 
@@ -141,7 +150,7 @@ const Container = () => {
                         <div className=' text-gray-400'><span>4.8</span><span>||100+ Sold</span></div>
                     </div>
                     <div className='w-[100%] flex gap-2'>
-                      <button className='w-[50%] shadow-2xl bg-green-500 rounded-[4px] pt-[5px] pb-[5px] hover:bg-green-300' > <i class="fa-solid fa-cart-plus"></i>Add To Card</button>
+                      <button className='addtocard w-[50%] shadow-2xl bg-green-500 rounded-[4px] pt-[5px] pb-[5px] hover:bg-green-300' > <i class="fa-solid fa-cart-plus"></i>Add To Card</button>
                       <button className=' w-[50%] shadow-2xl bg-blue-500 rounded-[4px] hover:bg-blue-300'><i class="fa-solid fa-truck-fast"></i> Shiping </button>
                     </div>
                 </div>
@@ -151,37 +160,37 @@ const Container = () => {
            </div>
         </div>
         <div className="payment flex justify-between p-[10px] mt-[70px] mb-[20px]">
-           <div className="qr w-[150px] border-2 border-blue-500 rounded-[10px]">
+           <div className="qr w-[150px] ">
             <h3 className=' text-center font-bold text-[20px] mb-[20px]'>SCANE ME</h3>
             <img className='mb-[10px]' src="https://th.bing.com/th/id/OIP.XddA3we5txwZAP4fAJtYRQHaHa?w=260&h=195&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3" alt="" />
            </div>
-           <div className="loyality w-[140px]  border-2 border-blue-500 rounded-[10px]  pl-[10px] pr[10px]" >
+           <div className="loyality w-[140px]   pl-[10px] pr[10px]" >
                <h2 className=' text-center font-bold text-[20px]'>LOYALITY</h2>
               <div><i class="fa-solid fa-hand-holding-heart m-[5px]"></i>Honesty</div>
               <div><i class="fa-solid fa-handshake m-[5px]"></i>Quality</div>
               <div><i class="fa-solid fa-hands m-[5px]"></i>Efficiency</div>
            </div>
-           <div className="followUs w-[200px]  text-center block justify-center  border-2 border-blue-500 rounded-[10px]">
+           <div className="followUs w-[200px]  text-center block justify-center ">
             <h2 className=' text-center font-bold'>FOLLOW US </h2>
              <div><i class="fa-brands fa-facebook m-[5px]"></i>Facebook</div>
              <div><i class="fa-brands fa-square-instagram m-[5px]"></i>Instargram</div>
              <div><i class="fa-brands fa-tiktok m-[5px]"></i>Instargram</div>
              <div><i class="fa-brands fa-youtube m-[5px]"></i>Instargram</div>
            </div>
-           <div className="service w-[230px] border-2  border-blue-600 rounded-[10px]">
+           <div className="service w-[230px] ">
             <h2 className=' text-center font-bold text-[20px]'>Costomer Service </h2>
             <div><i class="fa-solid fa-question m-[5px]"></i>Online Privercy Exchange </div>
             <div><i class="fa-solid fa-shield-halved m-[5px]"></i>Privercy</div>
             <div><i class="fa-solid fa-location-dot m-[5px]"></i>Find Store </div>
 
            </div>
-           <div className="contactUs border-2 border-blue-600 rounded-[10px]">
+           <div className="contactUs ">
             <h2 className=' font-bold text-[20px] text-center'>CONTACT US </h2>
             <div><i class="fa-solid fa-envelope m-[5px]"></i>phanithphal007@gmail.com</div>
             <div><i class="fa-solid fa-phone-volume m-[5px]"></i>+885 678 900</div>
             <div><i class="fa-brands fa-telegram m-[5px]"></i>@phanith009</div>
            </div>
-           <div className="accep  border-2 border-blue-600 rounded-[10px] pl-[10px] pr-[10px]">
+           <div className="accep ] pl-[10px] pr-[10px]">
             <h2 className=' font-bold text-[20px] text-center'>We Accept</h2>
             <img className='w-[300px]' src="https://zandokh.com/image/catalog/logo/web-footer/We-accept-payment%E2%80%93for-web-footer-1.png" alt="" />
            </div>
@@ -190,6 +199,7 @@ const Container = () => {
           <h2  >@2024-2025 All ringt|| Owner by phanith</h2>
 
         </footer>
+        
     </div>
   )
 }
